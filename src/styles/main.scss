@@ -1,5 +1,31 @@
+@import '../styles/texts';
+@import '../styles/header.scss';
+@import '../styles/nav.scss';
+@import '../styles/media-queries';
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
-  background: #EEE;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
+	height: 200vh;
+	padding: 0 20px;
+}
+
+a,
+button {
+	display: inline-block;
+	font-family: inherit;
+	color: inherit;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
 }

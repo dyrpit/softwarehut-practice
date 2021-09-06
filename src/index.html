@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Webpack Boilerplate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <h1>Hello world!</h1>
-  <p>Your app is working!</p>
-  <img src="./images/inserted.png" alt="Inserted Image">
-  <div class="background"><!-- Emtpy div --></div>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<title>Zonifero</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo">
+				<img src="./images/logo.png" alt="Zonifero Logo" />
+			</div>
+			<nav class="nav">
+				<div class="burger__icon" tabindex="1">
+					<span class="burger__icon__bar"></span>
+				</div>
+				<ul class="nav__list">
+					<li class="nav__list__item">
+						<a href="#">Zonifero products</a>
+					</li>
+					<li class="nav__list__item">
+						<a href="#">Store</a>
+					</li>
+					<li class="nav__list__item">
+						<a href="#">Blog</a>
+					</li>
+					<li class="nav__list__item">
+						<a href="#">
+							<img src="./images/globe.png" alt="Globe icon" />
+							<i class="fas fa-angle-down"></i>
+						</a>
+					</li>
+					<li class="nav__list__item--button">
+						<a href="#">Sign in</a>
+					</li>
+					<li class="nav__list__item--button special">
+						<a href="#">Get the app</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="nav-main">
+				<p class="nav-main__title">
+					zonifero WorkPlace
+					<i class="fas fa-angle-down"></i>
+				</p>
+				<ul class="nav-main__list">
+					<li class="nav-main__list__item--active">
+						<a href="#">Overview</a>
+					</li>
+					<li class="nav-main__list__item">
+						<a href="#">Features</a>
+					</li>
+					<li class="nav-main__list__item">
+						<a href="#">Specs</a>
+					</li>
+					<li class="nav-main__list__item">
+						<a href="#">FAQ</a>
+					</li>
+					<li class="nav-main__list__item">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</body>
 </html>
