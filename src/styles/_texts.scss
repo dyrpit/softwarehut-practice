@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300;400;700&display=swap');
+@import './colors';
+@import './fontSizes';
+
+@mixin big-headline-text-color {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: $product-color;
+	font-size: $xxl;
+	line-height: 80px;
+}
+
+@mixin description-text {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: $text-color;
+	font-size: $xl;
+	line-height: 40px;
+}
+
+@mixin big-headline-text {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: $text-color;
+	font-size: $xxl;
+	line-height: 80px;
+}
+
+@mixin header-l {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: $text-color;
+	font-size: $xl;
+	line-height: 40px;
+}
+
+@mixin header-m {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: $text-color;
+	font-size: $l;
+	line-height: 26px;
+}
+
+@mixin header-m-active {
+	@include header-m;
+
+	color: $product-color;
+}
+
+@mixin header-s {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: $text-color;
+	font-size: $m;
+}
+
+@mixin paragraph-text {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: $text-color;
+	font-size: $m;
+	line-height: 25px;
+}
+
+@mixin button {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: $m;
+}
+
+@mixin tab {
+	display: inline-block;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	color: $text-color;
+	font-weight: 400;
+	font-size: $m;
+}
+
+@mixin tab-active {
+	@include tab;
+	position: relative;
+
+	font-weight: 700;
+
+	& a::after {
+		content: '';
+		position: absolute;
+		bottom: -30%;
+		left: 0;
+		height: 3px;
+		width: 50%;
+		background-color: $secondary-color;
+	}
+}
+
+@mixin input {
+	font-family: 'Roboto', sans-serif;
+	color: $text-color;
+}
+
+@mixin input-label {
+	@include input;
+
+	font-weight: 300;
+	font-size: $s;
+}
+
+@mixin input-content {
+	@include input;
+
+	font-weight: 400;
+	font-size: $xl;
+}
