@@ -1,0 +1,131 @@
+.slider-bottom-wrapper {
+	padding-top: 80px;
+	position: relative;
+}
+
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider {
+	display: flex;
+	padding-top: 140px;
+	scroll-behavior: smooth;
+	overflow-x: auto;
+
+	&--bottom {
+		@extend .slider;
+		padding-top: 30px;
+	}
+
+	&__item {
+		height: 100%;
+		width: 100%;
+		flex-shrink: 0;
+		padding: 0 5vw;
+
+		& img {
+			display: block;
+			width: 205px;
+			padding-bottom: 60px;
+			margin: 0 auto;
+		}
+
+		&--bottom {
+			@extend .slider__item;
+			background-color: white;
+			min-height: 500px;
+			max-height: 500px;
+			padding-top: 50px;
+			padding-bottom: 70px;
+		}
+
+		&__title {
+			@include header-m;
+			padding-bottom: 40px;
+
+			&--bottom {
+				@extend .slider__item__title;
+			}
+		}
+
+		&__description {
+			@include paragraph-text;
+		}
+	}
+}
+
+.slider-buttons {
+	display: flex;
+	justify-content: center;
+	padding-top: 60px;
+
+	&--bottom {
+		@extend .slider-buttons;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__button {
+		height: 5px;
+		width: 5px;
+		border-radius: 50%;
+		background-color: $text-color;
+		margin: 0 10px;
+
+		&--active {
+			@extend .slider-buttons__button;
+			background-color: $product-color;
+		}
+	}
+}
+// TODO should I use media queries like this or add media to each element that i modify?
+@include tablet {
+	.slider-bottom-wrapper {
+		grid-area: slider-bottom;
+	}
+
+	.slider {
+		grid-area: slider;
+		padding: 60px 10vw 0 0;
+		overflow: hidden;
+
+		&--bottom {
+			grid-area: slider-bottom;
+			padding-bottom: 150px;
+		}
+
+		&__item {
+			flex-shrink: 1;
+			padding: 70px;
+
+			&--bottom {
+				width: 300px;
+				max-height: 500px;
+				padding: 70px 50px 50px 50px;
+				margin-right: 20px;
+				flex-shrink: 0;
+			}
+
+			& img {
+				width: 160px;
+				padding-bottom: 70px;
+			}
+
+			&__title {
+				@include header-l;
+
+				&--bottom {
+					@include header-m;
+					padding-bottom: 40px;
+				}
+			}
+		}
+
+		&-buttons {
+			display: none;
+		}
+	}
+}

@@ -4,6 +4,8 @@
 @import '../styles/header.scss';
 @import '../styles/nav.scss';
 @import '../styles/burger-menu.scss';
+@import '../styles/section-overview.scss';
+@import '../styles/slider.scss';
 
 *,
 *::after,
@@ -13,9 +15,16 @@
 	box-sizing: border-box;
 }
 
-body {
-	height: 200vh;
-	padding: 0 20px;
+html::-webkit-scrollbar {
+	width: 5px;
+
+	&-track {
+		background-color: $background-color;
+	}
+
+	&-thumb {
+		background-color: $product-color;
+	}
 }
 
 a,
@@ -30,4 +39,14 @@ button {
 
 ul {
 	list-style-type: none;
+}
+
+main {
+	padding-top: 80px;
+}
+
+@include tablet {
+	main {
+		padding-top: 200px;
+	}
 }
