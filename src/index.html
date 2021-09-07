@@ -4,6 +4,8 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- TODO: Fix favicon display -->
+		<link rel="icon" href="favicon.ico" sizes="16x16" />
 		<link
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -15,7 +17,11 @@
 	<body>
 		<header class="header">
 			<div class="header__logo">
-				<img src="./images/logo.png" alt="Zonifero Logo" />
+				<picture>
+					<!-- TODO not working? -->
+					<source media="(max-width: 500px)" srcset="/images/zonifero_logo.png" />
+					<img src="./images/logo.png" alt="Zonifero Logo" />
+				</picture>
 			</div>
 			<nav class="nav">
 				<div class="burger__icon" tabindex="1">
@@ -69,5 +75,106 @@
 				</ul>
 			</nav>
 		</header>
+		<main>
+			<section class="overview" id="section-overview">
+				<div class="overview__wrapper">
+					<h1 class="overview__title">Streamline your workplace</h1>
+				</div>
+				<div class="overview__image">
+					<div class="overview__image--fixed"></div>
+				</div>
+				<div class="overview__description">
+					<p class="overview__paragraph">
+						Effectively and quickly from your mobile device. Staying connected has never been easier
+						with zonifero WorkPlace.
+					</p>
+					<div class="overview__icons">
+						<img src="./images/5a902dbf7f96951c82922875.png" height="70px" />
+						<div style="display: flex; align-items: center">
+							<img src="./images/5a902db97f96951c82922874.png" height="50px" />
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider__item" id="slide-1">
+						<h2 class="slider__item__title">Managment</h2>
+						<p class="slider__item__description">
+							Tools for real-time managment of all your facilities and people across multiple sites.
+							Ease, speed and effectiveness of facilities communications.
+						</p>
+					</div>
+					<div class="slider__item" id="slide-2">
+						<h2 class="slider__item__title">Employees</h2>
+						<p class="slider__item__description">
+							Improved productivity and satisfaction as your employees stay informed, connected and
+							can feed requests and updates in real time.
+						</p>
+					</div>
+					<div class="slider__item" id="slide-3">
+						<h2 class="slider__item__title">Visitors</h2>
+						<p class="slider__item__description">
+							A smooth and welcoming visitor experience - easy navigation around your facilities.
+						</p>
+					</div>
+				</div>
+				<div class="slider-buttons">
+					<a href="#slide-1" class="slider-buttons__button--active"></a>
+					<a href="#slide-2" class="slider-buttons__button"></a>
+					<a href="#slide-3" class="slider-buttons__button"></a>
+				</div>
+				<div class="slider-bottom-wrapper">
+					<h2 class="overview__title--small">Problem solving app</h2>
+					<div class="slider--bottom">
+						<div class="slider__item--bottom" id="slide-4">
+							<img src="./images/desk_icon.png" />
+							<h2 class="slider__item__title--bottom">Use your time and space smarter</h2>
+							<p class="slider__item__description">
+								Never again run out of coffee or other supplies. Create an efficient hive for your
+								busy bees.
+							</p>
+						</div>
+						<div class="slider__item--bottom" id="slide-5">
+							<img src="./images/desk_icon.png" />
+							<h2 class="slider__item__title--bottom">Never stress about meetings again</h2>
+							<p class="slider__item__description">
+								Zonifero will measure how you use the rooms so that you always have enough rooms
+								available.
+							</p>
+						</div>
+						<div class="slider__item--bottom" id="slide-6">
+							<img src="./images/desk_icon.png" />
+							<h2 class="slider__item__title--bottom">Find the right person in a breeze</h2>
+							<p class="slider__item__description">
+								Can't keep track of your peers in large office space? Zonifero can pinpoint their
+								location.
+							</p>
+						</div>
+						<div class="slider__item--bottom" id="slide-7">
+							<img src="./images/desk_icon.png" />
+							<h2 class="slider__item__title--bottom">Save your desk and room space</h2>
+							<p class="slider__item__description">
+								Zonifero will tell you which desks and rooms are in use and how many and which of
+								them are idle.
+							</p>
+						</div>
+						<div class="slider__item--bottom" id="slide-8">
+							<img src="./images/desk_icon.png" />
+							<h2 class="slider__item__title--bottom">Swiftly introduce new employees</h2>
+							<p class="slider__item__description">
+								With built-in maps, Q&A and notifications, new bees can find their way around the
+								office.
+							</p>
+						</div>
+					</div>
+					<div class="slider-buttons--bottom">
+						<a href="#slide-4" class="slider-buttons__button--active"></a>
+						<a href="#slide-5" class="slider-buttons__button"></a>
+						<a href="#slide-6" class="slider-buttons__button"></a>
+						<a href="#slide-7" class="slider-buttons__button"></a>
+						<a href="#slide-8" class="slider-buttons__button"></a>
+					</div>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
