@@ -1,11 +1,14 @@
-@import '../styles/texts';
-@import '../styles/media-queries';
+@import './texts';
+@import './media-queries';
+@import './metrics';
 
-@import '../styles/header.scss';
-@import '../styles/nav.scss';
-@import '../styles/burger-menu.scss';
-@import '../styles/section-overview.scss';
-@import '../styles/slider.scss';
+@import './button.scss';
+@import './header.scss';
+@import './nav.scss';
+@import './burger-menu.scss';
+@import './section-overview.scss';
+@import './slider.scss';
+@import './section-features.scss';
 
 *,
 *::after,
