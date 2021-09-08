@@ -81,7 +81,6 @@
 
 @mixin tab-active {
 	@include tab;
-	position: relative;
 
 	font-weight: 700;
 
