@@ -1,25 +1,47 @@
 .overview {
+	padding-bottom: 5 * $metric-s;
 	background-color: $background-color;
 	overflow: hidden;
 
+	@include tablet {
+		padding-left: 10vw;
+		padding-bottom: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			'title image'
+			'description image'
+			'slider slider'
+			'slider-bottom slider-bottom';
+	}
+
 	&__wrapper {
-		padding-top: 80px;
-		padding-left: 20px;
-		padding-right: 40px;
 		display: flex;
 		align-items: center;
+		padding-top: 4 * $metric-s;
+		padding-left: $metric-s;
+		padding-right: $metric-m;
+
+		@include desktop {
+			padding-left: $metric-l;
+		}
 	}
 
 	&__title {
 		@include header-m;
-		font-size: 40px;
+		font-size: $metric-m;
 		color: $product-color;
-		line-height: 50px;
+		line-height: 5 * $metric-xs;
 		letter-spacing: -2px;
 
 		&--small {
 			@include header-s;
 			padding-left: 6vw;
+
+			@include tablet {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -30,88 +52,60 @@
 		background-repeat: no-repeat;
 		background-position: bottom;
 
+		@include tablet {
+			grid-area: image;
+			height: 100%;
+			background-position: 100% 80%;
+		}
+
 		&--fixed {
 			@extend .overview__image;
 
-			height: 100%;
 			background-image: url('../images/hand.png');
-			background-size: contain;
-			background-repeat: no-repeat;
 			background-position-y: 40vh;
 			background-attachment: fixed;
+
+			@include tablet {
+				background-size: 45%;
+			}
+
+			@include desktop {
+				background-size: 40%;
+				background-position: 100% 15vw;
+			}
+		}
+	}
+
+	&__description {
+		@include tablet {
+			padding-left: $metric-s;
+			padding-right: $metric-m;
+		}
+
+		@include desktop {
+			padding-left: $metric-l;
 		}
 	}
 
 	&__paragraph {
-		padding: 60px 20px 40px 20px;
 		@include paragraph-text;
+		padding: $metric-l $metric-s $metric-m;
+
+		@include tablet {
+			padding: 0;
+			font-size: $metric-base;
+			line-height: 5 * $metric-xs;
+			letter-spacing: -2px;
+		}
 	}
 
 	&__icons {
 		display: flex;
 		justify-content: center;
-	}
-}
 
-@include tablet {
-	.overview {
-		padding-left: 10vw;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-template-areas:
-			'title image'
-			'description image'
-			'slider slider'
-			'slider-bottom slider-bottom';
-
-		&__title {
-			&--small {
-				padding-left: 0;
-			}
-		}
-
-		&__image {
-			grid-area: image;
-			height: 100%;
-			background-position: 100% 80%;
-
-			&--fixed {
-				background-size: 45%;
-			}
-		}
-
-		&__description {
-			padding-left: 20px;
-			padding-right: 40px;
-		}
-
-		&__paragraph {
-			font-size: 30px;
-			line-height: 50px;
-			letter-spacing: -2px;
-			padding: 0;
-		}
-
-		&__icons {
-			padding-top: 60px;
+		@include tablet {
 			justify-content: flex-start;
-		}
-	}
-}
-
-@include desktop {
-	.overview {
-		&__image {
-			&--fixed {
-				background-size: 40%;
-				background-position: 100% 15vw;
-			}
-		}
-
-		&__wrapper,
-		&__description {
-			padding-left: 60px;
+			padding-top: $metric-l;
 		}
 	}
 }

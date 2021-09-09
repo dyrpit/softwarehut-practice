@@ -1,0 +1,340 @@
+.features {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	background-color: $background-color;
+	overflow: hidden;
+
+	&__title {
+		@include header-s;
+		padding: 0 10vw $metric-s;
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100vw;
+		background-image: url('../images/mob_mobile.png');
+		background-repeat: no-repeat;
+		background-size: 35vh;
+		background-attachment: fixed;
+		background-position-x: 50%;
+		// background-position-x: 40vw;
+		background-position-y: 50%;
+		z-index: 1;
+
+		@include tablet {
+			background-image: url('../images/Silver.png');
+		}
+	}
+
+	&__header {
+		position: relative;
+		background-color: $product-color;
+
+		&-bg {
+			position: relative;
+			height: 400px;
+			background-image: url('../images/mob_features_bg.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+
+			@include tablet {
+				height: 500px;
+				background-image: url('../images/Layer\ 78.png');
+			}
+		}
+
+		&-desc-wrapper {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding: 0 $metric-s $metric-l;
+			background-color: $product-color;
+			z-index: 1;
+
+			@include tablet {
+				flex-direction: row;
+				padding-right: 10vw;
+				padding-left: 10vw;
+			}
+		}
+
+		&-title-wrapper {
+			width: 420px;
+
+			@include tablet {
+				padding-left: $metric-l;
+			}
+		}
+
+		&-title {
+			@include header-l;
+			color: white;
+
+			&:last-of-type {
+				padding-bottom: $metric-m;
+			}
+
+			@include tablet {
+				@include big-headline-text;
+				color: white;
+				font-size: 5 * $metric-xs;
+			}
+		}
+
+		&-text {
+			@include paragraph-text;
+			color: white;
+			max-width: 550px;
+
+			@include tablet {
+				align-self: center;
+				padding-left: 230px;
+			}
+		}
+
+		&-button {
+			@extend .features__header-desc-wrapper;
+			@include button;
+			max-width: 420px;
+			padding: $metric-s 0;
+			margin: 0 auto;
+			color: white;
+			border-top: 1px dotted rgba(255, 255, 255, 0.2);
+			text-align: center;
+
+			@include tablet {
+				display: block;
+			}
+		}
+	}
+
+	&__slider-button {
+		position: absolute;
+		bottom: -$metric-s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 4 * $metric-xs;
+		height: 4 * $metric-xs;
+		background-color: $background-color;
+		z-index: 2;
+
+		&--right {
+			right: 0;
+		}
+
+		&--left {
+			left: 0;
+		}
+
+		@include tablet {
+			bottom: -$metric-base;
+			width: 7 * $metric-xs;
+			height: 7 * $metric-xs;
+		}
+	}
+
+	&__body {
+		position: relative;
+		padding-top: 7 * $metric-xs;
+		background-color: white;
+		z-index: 1;
+
+		@include tablet {
+			padding: 0 10vw;
+		}
+	}
+
+	&__list {
+		position: relative;
+		padding: 0 $metric-s;
+		background-color: white;
+		z-index: 1;
+		cursor: pointer;
+
+		@include tablet {
+			padding: 0 10vw;
+		}
+
+		&-item {
+			@include header-m;
+			display: flex;
+			justify-content: space-between;
+			padding: $metric-base 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+			@include tablet {
+				padding-left: $metric-l;
+				padding-right: $metric-l;
+			}
+
+			&:nth-last-of-type(1) {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			}
+
+			&--active {
+				color: $product-color;
+			}
+		}
+	}
+
+	&__info {
+		position: relative;
+		padding: $metric-l $metric-s 0;
+		background-color: white;
+		z-index: 1;
+
+		@include tablet {
+			display: flex;
+			padding: $metric-xl 10vw 0;
+		}
+
+		&-card {
+			margin-bottom: $metric-l;
+
+			@include tablet {
+				padding: 0 $metric-l;
+			}
+		}
+
+		&-title {
+			@include header-l;
+			padding-bottom: $metric-m;
+		}
+
+		&-text {
+			@include paragraph-text;
+		}
+	}
+
+	&__download {
+		position: relative;
+		background-color: white;
+		z-index: 1;
+
+		@include tablet {
+			padding: 0 10vw;
+		}
+
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: $metric-m 2 * $metric-m;
+			background-color: $background-color;
+
+			@include tablet {
+				flex-direction: row;
+				justify-content: space-between;
+				padding: $metric-base 5 * $metric-xs;
+			}
+		}
+
+		&-title {
+			@include header-m;
+			margin-bottom: $metric-base;
+
+			@include tablet {
+				margin: 0;
+			}
+		}
+
+		&-text-wrapper {
+			align-self: stretch;
+
+			display: flex;
+			justify-content: center;
+
+			@include tablet {
+				align-self: center;
+			}
+		}
+
+		&-text {
+			@include paragraph-text;
+			margin-bottom: $metric-base;
+			text-align: center;
+
+			&--border-left {
+				padding: 0 $metric-s;
+				border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+				&:first-child() {
+					border: none;
+
+					@include tablet {
+						border-left: 1px solid rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+
+			@include tablet {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.booking {
+	@include tablet {
+		display: flex;
+	}
+
+	&__desc-wrapper {
+		padding-left: $metric-s;
+		padding-right: $metric-m;
+
+		@include tablet {
+			flex-basis: 50%;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: $metric-l;
+		}
+	}
+
+	&__title {
+		@include header-l;
+		padding-bottom: $metric-m;
+	}
+
+	&__text {
+		@include paragraph-text;
+
+		&--bold {
+			font-weight: 700;
+		}
+	}
+
+	&__view {
+		position: relative;
+		@include tablet {
+			flex-basis: 50%;
+		}
+	}
+
+	&__text-wrapper {
+		position: absolute;
+		top: 8vw;
+		right: 5vw;
+	}
+}
+
+.bg-layer {
+	position: relative;
+	width: 100%;
+	height: $metric-l;
+	background-color: $product-color;
+	z-index: 0;
+
+	@include tablet {
+		height: $metric-xl;
+	}
+}

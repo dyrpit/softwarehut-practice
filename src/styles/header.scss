@@ -1,5 +1,3 @@
-@import './media-queries';
-
 .header {
 	position: fixed;
 	top: 0;
@@ -8,19 +6,17 @@
 	height: 80px;
 	display: flex;
 	align-items: center;
-	padding: 0 20px;
+	padding: 0 $metric-s;
 	background-color: white;
 	z-index: 1000;
-}
 
-@include tablet {
-	.header {
+	@include tablet {
 		justify-content: space-between;
 		align-items: flex-start;
 		height: 130px;
 
 		&__logo {
-			padding-top: 40px;
+			padding-top: $metric-m;
 			padding-left: 70px;
 			height: 25px;
 		}

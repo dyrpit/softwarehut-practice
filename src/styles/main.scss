@@ -45,11 +45,9 @@ ul {
 }
 
 main {
-	padding-top: 80px;
-}
+	padding-top: 2 * $metric-m;
 
-@include tablet {
-	main {
-		padding-top: 200px;
+	@include tablet {
+		padding-top: 5 * $metric-m;
 	}
 }

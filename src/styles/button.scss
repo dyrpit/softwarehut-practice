@@ -1,7 +1,7 @@
 .button {
 	@include button;
 
-	height: 60px;
+	height: $metric-l;
 	width: 200px;
 	background-color: $product-color;
 	color: white;

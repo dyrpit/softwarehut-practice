@@ -1,6 +1,11 @@
 .slider-bottom-wrapper {
-	padding-top: 80px;
 	position: relative;
+	padding-top: 4 * $metric-s;
+
+	@include tablet {
+		grid-area: slider-bottom;
+		padding-left: $metric-l;
+	}
 }
 
 .slider::-webkit-scrollbar {
@@ -9,43 +14,81 @@
 
 .slider {
 	display: flex;
-	padding-top: 140px;
+	padding-top: 7 * $metric-s;
 	scroll-behavior: smooth;
 	overflow-x: auto;
 
+	@include tablet {
+		grid-area: slider;
+		padding: $metric-l 10vw 0 0;
+		overflow: hidden;
+	}
+
 	&--bottom {
 		@extend .slider;
-		padding-top: 30px;
+		padding-top: $metric-base;
+
+		@include tablet {
+			grid-area: slider-bottom;
+			padding-bottom: 5 * $metric-base;
+		}
 	}
 
 	&__item {
+		flex-shrink: 0;
 		height: 100%;
 		width: 100%;
-		flex-shrink: 0;
 		padding: 0 5vw;
+
+		@include tablet {
+			flex-shrink: 1;
+			padding: 7 * $metric-xs;
+		}
 
 		& img {
 			display: block;
 			width: 205px;
-			padding-bottom: 60px;
+			padding-bottom: $metric-l;
 			margin: 0 auto;
+
+			@include tablet {
+				width: 4 * $metric-m;
+				padding-bottom: 7 * $metric-xs;
+			}
 		}
 
 		&--bottom {
 			@extend .slider__item;
-			background-color: white;
 			min-height: 500px;
 			max-height: 500px;
-			padding-top: 50px;
-			padding-bottom: 70px;
+			padding-top: 5 * $metric-xs;
+			padding-bottom: 7 * $metric-xs;
+			background-color: white;
+
+			@include tablet {
+				flex-shrink: 0;
+				width: 300px;
+				max-height: 500px;
+				padding: 7 * $metric-xs 5 * $metric-xs 5 * $metric-xs;
+				margin-right: $metric-s;
+			}
 		}
 
 		&__title {
 			@include header-m;
-			padding-bottom: 40px;
+			padding-bottom: $metric-m;
+
+			@include tablet {
+				@include header-l;
+			}
 
 			&--bottom {
 				@extend .slider__item__title;
+
+				@include tablet {
+					@include header-m;
+					padding-bottom: $metric-m;
+				}
 			}
 		}
 
@@ -58,12 +101,16 @@
 .slider-buttons {
 	display: flex;
 	justify-content: center;
-	padding-top: 60px;
+	padding-top: $metric-l;
+
+	@include tablet {
+		display: none;
+	}
 
 	&--bottom {
 		@extend .slider-buttons;
 		position: absolute;
-		bottom: 30px;
+		bottom: $metric-base;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -71,62 +118,13 @@
 	&__button {
 		height: 5px;
 		width: 5px;
+		margin: 0 $metric-xs;
 		border-radius: 50%;
 		background-color: $text-color;
-		margin: 0 10px;
 
 		&--active {
 			@extend .slider-buttons__button;
 			background-color: $product-color;
-		}
-	}
-}
-// TODO should I use media queries like this or add media to each element that i modify?
-@include tablet {
-	.slider-bottom-wrapper {
-		grid-area: slider-bottom;
-		padding-left: 60px;
-	}
-
-	.slider {
-		grid-area: slider;
-		padding: 60px 10vw 0 0;
-		overflow: hidden;
-
-		&--bottom {
-			grid-area: slider-bottom;
-			padding-bottom: 150px;
-		}
-
-		&__item {
-			flex-shrink: 1;
-			padding: 70px;
-
-			&--bottom {
-				width: 300px;
-				max-height: 500px;
-				padding: 70px 50px 50px 50px;
-				margin-right: 20px;
-				flex-shrink: 0;
-			}
-
-			& img {
-				width: 160px;
-				padding-bottom: 70px;
-			}
-
-			&__title {
-				@include header-l;
-
-				&--bottom {
-					@include header-m;
-					padding-bottom: 40px;
-				}
-			}
-		}
-
-		&-buttons {
-			display: none;
 		}
 	}
 }
