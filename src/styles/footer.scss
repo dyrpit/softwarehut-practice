@@ -1,0 +1,57 @@
+.footer {
+	margin: 0 $metric-s;
+	background-color: $product-color;
+
+	&__content-wrapper {
+		padding-top: 5 * $metric-s;
+		padding-left: $metric-s;
+
+		@include tablet {
+			display: flex;
+			padding-left: 10vw;
+		}
+	}
+
+	&__nav-wrapper {
+		padding-bottom: 4 * $metric-s;
+
+		@include tablet {
+			padding-right: 5 * $metric-m;
+			padding-bottom: 8 * $metric-s;
+		}
+	}
+
+	&__nav-title {
+		@include header-s;
+		padding-bottom: $metric-base;
+		font-weight: 700;
+		color: white;
+	}
+
+	&__nav-item {
+		@include paragraph-text;
+		color: white;
+		padding-bottom: $metric-xs;
+	}
+
+	&__logo {
+		position: relative;
+		height: $metric-xl;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+		@include tablet {
+			height: 5 * $metric-m;
+			padding-left: 10vw;
+		}
+
+		&-img {
+			position: absolute;
+			top: $metric-m;
+			right: $metric-s;
+
+			@include tablet {
+				right: $metric-base;
+			}
+		}
+	}
+}
