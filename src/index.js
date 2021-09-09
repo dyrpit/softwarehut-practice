@@ -1,11 +1,3 @@
-/**
- * Import your modules and use them!
- */
-import { externalModule } from './js/myModule';
+import './js/module';
 
-/**
- * Import your styles!
- */
 import './styles/main.scss';
-
-externalModule.greet();
