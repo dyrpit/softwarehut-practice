@@ -3,13 +3,16 @@
 	margin: 5 * $metric-s 0;
 
 	@include tablet {
-		padding: 0 $metric-l;
-		margin: 5 * $metric-m 10vw;
+		margin: 5 * $metric-m 0;
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: 'title col-1 col-2';
+	}
+
+	@include desktop {
+		margin: 5 * $metric-m 10vw;
 	}
 
 	&__title {

@@ -4,8 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- TODO: Fix favicon display -->
-		<link rel="icon" href="./images/favicon.ico" sizes="16x16" />
+		<link rel="icon" href="favicon.ico" sizes="16x16" />
 		<link
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -55,19 +54,19 @@
 				</p>
 				<ul class="nav-main__list">
 					<li class="nav-main__list__item--active">
-						<a href="#">Overview</a>
+						<a href="#overview">Overview</a>
 					</li>
 					<li class="nav-main__list__item">
-						<a href="#">Features</a>
+						<a href="#features">Features</a>
 					</li>
 					<li class="nav-main__list__item">
-						<a href="#">Specs</a>
+						<a href="#specs">Specs</a>
 					</li>
 					<li class="nav-main__list__item">
-						<a href="#">FAQ</a>
+						<a href="#faq">FAQ</a>
 					</li>
 					<li class="nav-main__list__item">
-						<a href="#">Contact</a>
+						<a href="#contact">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -172,7 +171,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="features" id="section-features">
+			<section class="features" id="features">
 				<h2 class="features__title">Features</h2>
 				<div class="features__image"></div>
 				<header class="features__header">
@@ -210,9 +209,16 @@
 							</p>
 						</div>
 						<div class="booking__view">
-							<!-- TODO: add working <picture> sourceset -->
-							<!-- <img src="./images/mob_room_booking.png" alt="Mobile devices"/> -->
-							<img src="./images/Space_Gray.png" alt="Mobile devices" />
+							<img
+								src="./images/mob_room_booking.png"
+								alt="Mobile devices"
+								class="booking__view-img-mb"
+							/>
+							<img
+								src="./images/Space_Gray.png"
+								alt="Mobile devices"
+								class="booking__view-img-dt"
+							/>
 							<div class="booking__text-wrapper">
 								<p class="booking__text">
 									<span class="booking__text booking__text--bold">unlimited</span>
@@ -314,7 +320,6 @@
 						alt="Starter kit devices"
 						class="accesories__img"
 					/>
-					<!-- <div class="accesories__img"></div> -->
 					<div class="accesories__button-wrapper">
 						<button class="accesories__button button">Contact us</button>
 					</div>

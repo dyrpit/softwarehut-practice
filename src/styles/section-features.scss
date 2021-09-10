@@ -316,14 +316,43 @@
 	&__view {
 		position: relative;
 		@include tablet {
-			flex-basis: 50%;
+			flex-basis: 40%;
+		}
+
+		&-img-mb {
+			display: block;
+
+			@include mobile-horizontal {
+				display: none;
+			}
+
+			@include tablet {
+				display: none;
+			}
+		}
+
+		&-img-dt {
+			display: none;
+
+			@include mobile-horizontal {
+				display: block;
+			}
+
+			@include tablet {
+				display: block;
+			}
 		}
 	}
 
 	&__text-wrapper {
 		position: absolute;
-		top: 8vw;
-		right: 5vw;
+		top: $metric-s;
+		right: $metric-s;
+
+		@include mobile-horizontal {
+			top: $metric-base;
+			right: $metric-base;
+		}
 	}
 }
 

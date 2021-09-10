@@ -50,7 +50,7 @@
 		background-image: url('../images/desks.png');
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: bottom;
+		background-position: 100% 100%;
 
 		@include tablet {
 			grid-area: image;
@@ -62,16 +62,22 @@
 			@extend .overview__image;
 
 			background-image: url('../images/hand.png');
-			background-position-y: 40vh;
+			background-size: 250px;
 			background-attachment: fixed;
+			background-position: 50% 100%;
+
+			@include mobile-horizontal {
+				background-position: center;
+				background-size: 300px;
+			}
 
 			@include tablet {
-				background-size: 45%;
+				background-size: 500px;
+				background-position: 100% 80%;
 			}
 
 			@include desktop {
-				background-size: 40%;
-				background-position: 100% 15vw;
+				background-position: 100% 70%;
 			}
 		}
 	}

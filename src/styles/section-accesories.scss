@@ -21,10 +21,15 @@
 	}
 
 	&__desc-wrapper {
+		@include mobile-horizontal {
+			width: 70%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
 		@include tablet {
 			grid-area: title;
 			max-width: 350px;
-			// justify-self: center;
 		}
 	}
 
