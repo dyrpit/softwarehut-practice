@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- TODO: Fix favicon display -->
-		<link rel="icon" href="favicon.ico" sizes="16x16" />
+		<link rel="icon" href="./images/favicon.ico" sizes="16x16" />
 		<link
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -17,11 +17,8 @@
 	<body>
 		<header class="header">
 			<div class="header__logo">
-				<picture>
-					<!-- TODO not working? -->
-					<source media="(max-width: 500px)" srcset="/images/zonifero_logo.png" />
-					<img src="./images/logo.png" alt="Zonifero Logo" />
-				</picture>
+				<img src="./images/zonifero_logo.png" alt="Zonifero Logo" class="header__logo-img-mb" />
+				<img src="./images/logo.png" alt="Zonifero Logo" class="header__logo-img-dt" />
 			</div>
 			<nav class="nav">
 				<div class="burger__icon" tabindex="1">
@@ -300,6 +297,177 @@
 							<p class="features__download-text features__download-text--border-left">19.34 MB</p>
 						</div>
 						<button class="button">Download</button>
+					</div>
+				</div>
+			</section>
+			<section class="accesories">
+				<div class="accesories__wrapper">
+					<div class="accesories__desc-wrapper">
+						<h3 class="accesories__title">Shop zonifero accesories</h3>
+						<p class="accesories__text">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus inventore
+							laudantium, dolor dolores.
+						</p>
+					</div>
+					<img
+						src="./images/mob_starter_kit.png"
+						alt="Starter kit devices"
+						class="accesories__img"
+					/>
+					<!-- <div class="accesories__img"></div> -->
+					<div class="accesories__button-wrapper">
+						<button class="accesories__button button">Contact us</button>
+					</div>
+				</div>
+			</section>
+			<section class="faq" id="faq">
+				<div class="faq__title">Frequently Asked Questions</div>
+				<div class="faq__items-wrapper">
+					<div class="faq__item">
+						<p class="faq__item-question faq__item-question--active">
+							Do you store any of my information?
+						</p>
+						<p class="faq__item-answer faq__item-answer--visible">
+							We do not. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							<span>Not helpful?</span>
+						</p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">Do you offer card readers?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">How do I delete my account?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">Can I use Zonifero anywhere in world?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">I've got a problem, how do I contact support?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+				</div>
+				<div class="faq__items-wrapper">
+					<div class="faq__item">
+						<p class="faq__item-question">Is Zonifero owned by SoftwareHut?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">How does Zonifero work?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">How does Zonifero's pricing work?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">Do you have any other fees?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+					<div class="faq__item">
+						<p class="faq__item-question">Which currencies do you support?</p>
+						<p class="faq__item-answer"></p>
+					</div>
+				</div>
+			</section>
+			<section class="contact" id="contact">
+				<ul class="contact__buttons-wrapper">
+					<li class="contact__button contact__button--active">
+						<a href="#contact">Contact form</a>
+					</li>
+					<li class="contact__button">
+						<a href="tel:+48880503180">Call us</a>
+					</li>
+				</ul>
+				<form class="contact__form" novalidate>
+					<div class="contact__form-wrapper">
+						<div class="contact__field-wrapper">
+							<label for="first-name" class="contact__form-label contact__form-label--required">
+								First name
+							</label>
+							<input type="text" name="first-name" class="contact__form-input" placeholder="John" />
+						</div>
+						<div class="contact__field-wrapper">
+							<label for="family-name" class="contact__form-label contact__form-label--required">
+								Family name
+							</label>
+							<input
+								type="text"
+								name="family-name"
+								class="contact__form-input"
+								placeholder="Wick"
+							/>
+						</div>
+						<div class="contact__field-wrapper">
+							<label for="email" class="contact__form-label contact__form-label--required">
+								Your email
+							</label>
+							<input
+								type="email"
+								name="email"
+								class="contact__form-input"
+								placeholder="johnw@hollywood.com"
+							/>
+						</div>
+						<div class="contact__field-wrapper">
+							<label for="phone" class="contact__form-label">Your phone</label>
+							<input
+								type="tel"
+								name="phone"
+								class="contact__form-input"
+								placeholder="+48 605 708 904"
+							/>
+						</div>
+						<div class="contact__field-wrapper contact__field-wrapper--long">
+							<label for="message" class="contact__form-label contact__form-label--required">
+								Message
+							</label>
+							<textarea
+								name="message"
+								placeholder="Hello :) I'm just wondering if you could.."
+								class="contact__form-input"
+							></textarea>
+						</div>
+					</div>
+					<button type="submit" class="button contact__form-submit">Send message</button>
+				</form>
+			</section>
+			<section class="products">
+				<h2 class="products__title">Zonifero product family</h2>
+				<div class="products__slider">
+					<div class="products__slider-item" id="slide-9">
+						<p class="products__slider-title">zonifero</p>
+						<p class="products__slider-title products__slider-title--color">Lobby</p>
+						<p class="products__slider-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore et enim tenetur ipsum
+							velit deserunt laudantium eum repellat.
+						</p>
+					</div>
+					<div class="products__slider-item" id="slide-10">
+						<p class="products__slider-title">zonifero</p>
+						<p class="products__slider-title products__slider-title--color">Passport</p>
+						<p class="products__slider-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore et enim tenetur ipsum
+							velit deserunt laudantium eum repellat.
+						</p>
+					</div>
+					<div class="products__slider-item" id="slide-11">
+						<p class="products__slider-title">zonifero</p>
+						<p class="products__slider-title products__slider-title--color">Services</p>
+						<p class="products__slider-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore et enim tenetur ipsum
+							velit deserunt laudantium eum repellat.
+						</p>
+					</div>
+					<div class="products__slider-item" id="slide-12">
+						<p class="products__slider-title">zonifero</p>
+						<p class="products__slider-title products__slider-title--color">TV</p>
+						<p class="products__slider-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore et enim tenetur ipsum
+							velit deserunt laudantium eum repellat.
+						</p>
 					</div>
 				</div>
 			</section>

@@ -10,6 +10,16 @@
 	background-color: white;
 	z-index: 1000;
 
+	&__logo {
+		&-img-mb {
+			width: 30px;
+		}
+
+		&-img-dt {
+			display: none;
+		}
+	}
+
 	@include tablet {
 		justify-content: space-between;
 		align-items: flex-start;
@@ -18,7 +28,14 @@
 		&__logo {
 			padding-top: $metric-m;
 			padding-left: 70px;
-			height: 25px;
+
+			&-img-mb {
+				display: none;
+			}
+
+			&-img-dt {
+				display: block;
+			}
 		}
 	}
 }
