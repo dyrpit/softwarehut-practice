@@ -1,6 +1,9 @@
 .footer {
-	margin: 0 $metric-s;
 	background-color: $product-color;
+
+	@include tablet {
+		margin: 0 $metric-s;
+	}
 
 	&__content-wrapper {
 		padding-top: 5 * $metric-s;

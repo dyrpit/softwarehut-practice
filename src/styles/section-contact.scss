@@ -1,0 +1,84 @@
+.contact {
+	margin-bottom: 110px;
+
+	@include tablet {
+		margin: 0 10vw 200px;
+	}
+
+	&__buttons-wrapper {
+		display: flex;
+		margin: 0 $metric-s $metric-l;
+
+		@include tablet {
+			padding: 0 0 0 $metric-l;
+			justify-content: center;
+		}
+	}
+
+	&__button {
+		@include tab;
+		margin-right: $metric-m;
+
+		&--active {
+			@include tab-active;
+		}
+	}
+
+	&__form {
+		padding: $metric-s;
+	}
+
+	&__form-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__field-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: $metric-m;
+
+		@include tablet {
+			flex-basis: 45%;
+			justify-content: space-between;
+		}
+
+		&--long {
+			flex-basis: 100%;
+		}
+	}
+
+	&__form-label {
+		@include input-label;
+		margin-bottom: $metric-xs;
+
+		&--required {
+			&::after {
+				content: '*';
+				color: $product-color;
+				font-weight: 400;
+			}
+		}
+	}
+
+	&__form-input {
+		@include input-content;
+		padding: $metric-s 0;
+		border-bottom: 1px dotted $text-color;
+
+		&::placeholder {
+			@include input-content;
+		}
+	}
+
+	&__form-submit {
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,73 @@
+.accesories {
+	margin-top: 2 * $metric-m;
+	background-color: $background-color;
+	overflow: hidden;
+
+	&__wrapper {
+		padding: $metric-l $metric-s $metric-base;
+
+		@include tablet {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas:
+				'title photo'
+				'title photo'
+				'button photo';
+
+			margin: 0 10vw;
+			padding: 5 * $metric-s $metric-s;
+		}
+	}
+
+	&__desc-wrapper {
+		@include tablet {
+			grid-area: title;
+			max-width: 350px;
+			// justify-self: center;
+		}
+	}
+
+	&__title {
+		@include big-headline-text;
+		margin-bottom: $metric-m;
+		font-size: $xxl / 2;
+		line-height: 40px;
+	}
+
+	&__text {
+		@include paragraph-text;
+		margin-bottom: $metric-s;
+	}
+
+	&__img {
+		display: block;
+		width: 100vw;
+		max-width: 500px;
+		margin: 0 auto;
+
+		@include tablet {
+			grid-area: photo;
+		}
+	}
+
+	&__button-wrapper {
+		@include tablet {
+			max-width: 350px;
+			width: 350px;
+			// justify-self: center;
+		}
+	}
+
+	&__button {
+		display: block;
+		margin: $metric-m auto 0;
+
+		@include tablet {
+			grid-area: button;
+			max-width: 350px;
+			justify-self: center;
+			margin: 0;
+		}
+	}
+}

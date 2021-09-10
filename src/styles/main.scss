@@ -8,7 +8,11 @@
 @import './burger-menu.scss';
 @import './section-overview.scss';
 @import './slider.scss';
+@import './section-accesories.scss';
+@import './section-faq.scss';
 @import './section-features.scss';
+@import './section-products.scss';
+@import './section-contact.scss';
 @import './footer.scss';
 
 *,
@@ -17,6 +21,10 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -32,7 +40,9 @@ html::-webkit-scrollbar {
 }
 
 a,
-button {
+button,
+input,
+textarea {
 	display: inline-block;
 	font-family: inherit;
 	color: inherit;
@@ -43,6 +53,10 @@ button {
 
 ul {
 	list-style-type: none;
+}
+
+textarea {
+	resize: none;
 }
 
 main {

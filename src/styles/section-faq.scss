@@ -1,0 +1,64 @@
+.faq {
+	padding: 0 $metric-s;
+	margin: 5 * $metric-s 0;
+
+	@include tablet {
+		padding: 0 $metric-l;
+		margin: 5 * $metric-m 10vw;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'title col-1 col-2';
+	}
+
+	&__title {
+		@include big-headline-text;
+		width: 200px;
+		font-size: $xxl / 2;
+		line-height: $metric-m;
+
+		@include tablet {
+			width: 300px;
+			font-size: 2 * $xl;
+			line-height: $metric-l;
+		}
+	}
+
+	&__items-wrapper {
+		margin-top: $metric-l;
+		max-width: 300px;
+
+		@include tablet {
+			margin: 0;
+			justify-self: center;
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+
+		&-question {
+			@include header-s;
+			margin-bottom: $metric-xs;
+			transition: 0.3s;
+
+			&--active {
+				font-weight: 700;
+				margin-bottom: $metric-s;
+			}
+		}
+
+		&-answer {
+			@include paragraph-text;
+
+			&--visible {
+				margin-bottom: $metric-m;
+			}
+
+			& span {
+				text-decoration: underline;
+			}
+		}
+	}
+}

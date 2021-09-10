@@ -1,0 +1,57 @@
+.products {
+	padding-bottom: $metric-l;
+	overflow: hidden;
+
+	@include tablet {
+		padding-left: 10vw;
+	}
+
+	&__title {
+		@extend .overview__title--small;
+
+		@include tablet {
+			padding-left: $metric-l;
+		}
+	}
+
+	&__slider {
+		display: flex;
+		margin-top: $metric-base;
+		overflow-x: auto;
+
+		@include tablet {
+			margin-left: $metric-l;
+		}
+
+		&-item {
+			min-width: 360px;
+			max-width: 420px;
+			height: 560px;
+			padding: 7 * $metric-xs $metric-base 0;
+			margin-right: $metric-s;
+			background-color: $background-color;
+			background-image: url('../images/mob_.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		&-title {
+			@include header-s;
+			font-weight: 700;
+
+			&--color {
+				@include header-l;
+				color: $product-color;
+				padding-bottom: $metric-l;
+			}
+		}
+
+		&-text {
+			@include paragraph-text;
+		}
+	}
+}
+
+.products__slider::-webkit-scrollbar {
+	display: none;
+}
