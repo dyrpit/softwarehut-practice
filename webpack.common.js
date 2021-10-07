@@ -3,33 +3,33 @@
  * It will be used in all enviornments
  */
 'use strict';
-const path                 = require('path');
-const HtmlWebpackPlugin    = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin   = require('clean-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[hash].css",
-      chunkFilename: "[id].css"
+      filename: 'css/[name].[hash].css',
+      chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
+      template: 'src/index.html',
+    }),
   ],
   output: {
     filename: 'js/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     // Fix references to URLs: use absolute
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|ico)$/,
         use: [
           {
             // Handles image files inserted in HTML and CSS
@@ -37,10 +37,10 @@ module.exports = {
             options: {
               name: '[name].[hash].[ext]',
               // Output these files in this directory
-              outputPath: "images/"
-            }
-          }
-        ]
+              outputPath: 'images/',
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
@@ -49,11 +49,11 @@ module.exports = {
             // Handles the HTML output, particularly useful for inserted assets to be processed by other loaders
             loader: 'html-loader',
             options: {
-              minimize: true
-            }
-          }
-        ]
-      }
-    ]
-  }
+              minimize: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
